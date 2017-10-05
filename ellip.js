@@ -9,13 +9,8 @@ Object.assign(String.prototype, {
   ellipmiddle(numCharsKept, fillStr='...') {
     const l = this.length
     const i = numCharsKept * .5
-    return this.substring(0, Math.floor(i))
+    return this.substring(0, Math.ceil(i))
       + fillStr
-      + this.substring(l - Math.ceil(i), l)
+      + this.substring(l - Math.floor(i), l)
   }
 })
-
-// USAGE:
-// console.log("abcdefg".ellip(1))
-// console.log("abcdefg".ellipfront(5))
-// console.log("abcdefg".ellipmiddle(3, '^^^'))
