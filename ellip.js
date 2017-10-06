@@ -2,12 +2,12 @@ function ellip(s, numCharsKept, fillStr='...') {
   return s.length > numCharsKept ? s.substring(0, numCharsKept) + fillStr : s
 }
 
-function ellipfront(s, numCharsKept, fillStr='...') {
+function ellipFront(s, numCharsKept, fillStr='...') {
   const l = s.length
   return l > numCharsKept ? fillStr + s.substring(l - numCharsKept, l) : s
 }
 
-function ellipmiddle(s, numCharsKept, fillStr='...') {
+function ellipMiddle(s, numCharsKept, fillStr='...') {
   const l = s.length
   const i = numCharsKept * .5
   return l > numCharsKept ? s.substring(0, Math.ceil(i)) + fillStr
